@@ -3,5 +3,6 @@ Building each step of GraphRag separately. Each step can be edited and modified.
 
 Step # 1
 Chunking of the input .txt file
+
 Before starting any process, we have to install or clone the microsoft graphrag repo.
 
