@@ -118,10 +118,10 @@ We do not make any changes in main code regarding chunkification, we make change
   The `clean_str` function performs basic text normalization. 
 
   Uses the regular expression `\s+` to find sequences of one or more whitespace characters
-
   Replaces these sequences with a single space `' '`.
-
   Uses the `strip()` method to remove any whitespace characters at the beginning and end of the string.
-
   This helps eliminate unintended spaces that might affect hashing or tokenization.
+
+  All of the above points are donw at the backend. But its better to look at each step in `chunkification`, and might be altered according to different type of tasks. Plus, the above five points make it clear 
+  to find all the `functions`, `classes`, and `methods` quickly in the main `graphrag` repo. 
 
