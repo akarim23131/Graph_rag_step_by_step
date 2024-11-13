@@ -125,3 +125,5 @@ We do not make any changes in main code regarding chunkification, we make change
   All of the above points are donw at the backend. But its better to look at each step in `chunkification`, and might be altered according to different type of tasks. Plus, the above five points make it clear 
   to find all the `functions`, `classes`, and `methods` quickly in the main `graphrag` repo. 
 
+  Example `notebook` and `output` excel file is also attached. 
+
