@@ -113,3 +113,15 @@ We do not make any changes in main code regarding chunkification, we make change
 
   `chunk_id` Is Based on Chunk Text. The hash is computed solely on the chunk text.
 
+  One additional step: a preprocessing of input(text) can also be performed using a function `clean_str` defined in `graphrag/index/utils/string.py`. 
+
+  The `clean_str` function performs basic text normalization. 
+
+  Uses the regular expression `\s+` to find sequences of one or more whitespace characters
+
+  Replaces these sequences with a single space `' '`.
+
+  Uses the `strip()` method to remove any whitespace characters at the beginning and end of the string.
+
+  This helps eliminate unintended spaces that might affect hashing or tokenization.
+
