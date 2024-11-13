@@ -60,5 +60,7 @@ We do not make any changes in main code regarding chunkification, we make change
 
 2] **Token based strategy:** Splits text into chunks based on a specified number of tokens using `TokenTextSplitter` class defined in `graphrag/index/text_splitting/text_splitting.py` in the main graphrag repo.
 
+   **Sentenc based strategy** Splits text into sentences using `NLTL`. This has to be installed before implementing this strategy. Strategies are defined in `graphrag/index/operations/chunk_text/strategies.py` 
+   in the the main graphrag repo.  
 
 
