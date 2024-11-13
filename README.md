@@ -54,11 +54,11 @@ input:
 We do not make any changes in main code regarding chunkification, we make changes in `settings.yaml` and import it in main code. The `chunk_size`, `chunk_overlap`, and `encoding_model` main settings by microsoft graphrag, but we can change it. `Input` has to be in `.txt` format for simplicity, the `base_dir: "input"` is the base directory means input has to be in `input` folder. We can change it as well. 
 
 
-**_**Important files and points to be noted before performing text splitting**_**
+**_**Important files and points to be noted before performing text splitting. This can help in changing the stuff involved in chunkification**_**
 
+1] Chunking is performed using `chunk.text` function which applies a chunking strategy defined in `graphrag/index/operations/chunk_text.py` in the main graphrag repo.
 
-
-
+2] **Token based strategy:** Splits text into chunks based on a specified number of tokens using `TokenTextSplitter` class defined in `graphrag/index/text_splitting/text_splitting.py` in the main graphrag repo.
 
 
 
