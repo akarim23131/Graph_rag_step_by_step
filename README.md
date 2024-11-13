@@ -63,4 +63,19 @@ We do not make any changes in main code regarding chunkification, we make change
    **Sentenc based strategy** Splits text into sentences using `NLTL`. This has to be installed before implementing this strategy. Strategies are defined in `graphrag/index/operations/chunk_text/strategies.py` 
    in the the main graphrag repo.  
 
+3] `document_id` is generated when loading each document (text file). The relevant code is in `graphrag/index/input/text.py`
+
+  ```python
+     async def load_file(
+    path: str, group: dict | None = None, _encoding: str = "utf-8"
+) -> dict[str, Any]:
+    if group is None:
+        group = {}
+    text = await storage.get(path, encoding="utf-8")
+    new_item = {**group, "text": text}
+    new_item["id"] = gen_md5_hash(new_item, new_item.keys())
+    new_item["title"] = str(Path(path).name)
+    return new_item
+```
+
 
