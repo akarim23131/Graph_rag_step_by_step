@@ -109,3 +109,7 @@ We do not make any changes in main code regarding chunkification, we make change
   
   `gen_md5_hash`: The same hashing function used for `document_id`.
 
+  For each row (chunk), generate an MD5 hash of the chunk text to create `chunk_id`.
+
+  `chunk_id` Is Based on Chunk Text. The hash is computed solely on the chunk text.
+
