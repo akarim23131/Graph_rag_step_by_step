@@ -51,6 +51,10 @@ input:
   file_pattern: ".*\\.txt$"
 ```
 
+We do not make any changes in main code regarding chunkification, we make changes in `settings.yaml` and import it in main code. The `chunk_size`, `chunk_overlap`, and `encoding_model` main settings by microsoft graphrag, but we can change it. `Input` has to be in `.txt` format for simplicity, the `base_dir: "input"` is the base directory means input has to be in `input` folder. We can change it as well. 
+
+
+
 
 
 
